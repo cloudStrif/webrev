@@ -1,0 +1,10 @@
+--- old/src/share/classes/java/awt/Component.java	2017-04-17 12:32:04.518694640 +0200
++++ new/src/share/classes/java/awt/Component.java	2017-04-17 12:32:04.402694789 +0200
+@@ -3403,6 +3403,7 @@
+                 PaintEvent e = new PaintEvent(this, PaintEvent.UPDATE,
+                                               new Rectangle(x, y, width, height));
+                 Toolkit.getEventQueue().postEvent(e);
++                Toolkit.getDefaultToolkit().sync();    
+             }
+         }
+     }
